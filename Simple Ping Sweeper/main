@@ -1,0 +1,9 @@
+#!/bin/bash
+read -p "Enter base IP e.g 192.168.1: " base_ip 
+# echo $base_ip
+for ip in {1..254}; do 
+	 ping -c 1 -w 1 "$base_ip.$ip" > /dev/null 2>&1 
+	 if [ $? -eq 0  ]; then
+            echo "$base_ip.$ip" >> "$1" 
+         fi 
+done 
