@@ -2,6 +2,8 @@
 This repo contains bash scripts, that serves different purposes 
 
 ## Main Script 
+
+### Purpose of the script 
 This script purpose is to create a script file when needed, as you know we need to create a folder for each script, and create a script file inside it, start writing script, save the script and give `execute permission` for the file. 
 all the above steps written in a script, so we need to just run the script and provide ( pass ) the scrip name as an argument to the main script.
 
@@ -10,20 +12,16 @@ all the above steps written in a script, so we need to just run the script and p
 ### purpose of the script 
 The purpose of the script is to scan the open ports against IP addresses and once there is an open port it will append it into a file named `open ports`, and everytime the code will be executed, it will append the `IP address:port` into the file named `open ports` 
 
+## Ping Sweeper script 
 
-### Script Code 
+### Purpose of the script 
+The purpose of the script is check which `IP addresses` are reachable, and the user will provide a base IP address ( subnet ID ) then it will rotate over the whole IP addreses on that subnet
 
-```
-#!/bin/bash
-read -p  "Enter IP address: " ip_address
-read -p "Enter First Port Number: " first_port
-read -p "enter Last Port Number: "  last_port
-#
-for (( port=$first_port; port <= $last_port; port++ )); do  
-	timeout 1 nc  -z  $ip_address $port > /dev/null  2>&1 
-        if [ $? -eq 0 ] ; then 
-		echo "$ip_address:$port" >> open_ports
-		echo "port $port is open"
-	fi 	
-done
-```
+*Note:* user should provide a file name that will store it in a file that user can name it `denoted by $1`
+
+
+
+
+
+
+
