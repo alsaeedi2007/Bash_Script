@@ -1,2 +1,2 @@
 # Bash_Script
-Bash Scripting 
+This repo contains bash scripts 
