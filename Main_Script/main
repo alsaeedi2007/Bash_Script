@@ -1,0 +1,11 @@
+#!/bin/bash
+dir=$1
+if [  ! -d "$dir"  ]; then 
+	mkdir "$dir"
+        cd "$dir" 
+        echo "#!/bin/bash" > main 
+        chmod +x main
+        echo "Project created successfully"
+else 
+	echo "Project already exist"
+fi 
