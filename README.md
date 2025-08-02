@@ -8,7 +8,7 @@ all the above steps written in a script, so we need to just run the script and p
 ## Port Scanner Script 
 
 ### purpose of the script 
-the purpose of the script is to scan the open ports against IP addresses and once there is an open port it will append it into a file named `open ports` 
+the purpose of the script is to scan the open ports against IP addresses and once there is an open port it will append it into a file named `open ports`, and everytime the code will be executed, it will append the `IP address:port` into the file named `open ports` 
 
 
 ### Script Code 
