@@ -1,0 +1,12 @@
+#!/bin/bash
+read -p  "Enter IP address: " ip_address
+read -p "Enter First Port Number: " first_port
+read -p "enter Last Port Number: "  last_port
+#
+for (( port=$first_port; port <= $last_port; port++ )); do  
+	timeout 1 nc  -z  $ip_address $port > /dev/null  2>&1 
+        if [ $? -eq 0 ] ; then 
+		echo "$ip_address:$port" >> open_ports
+		echo "port $port is open"
+	fi 	
+done
