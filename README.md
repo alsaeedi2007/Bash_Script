@@ -2,13 +2,13 @@
 This repo contains bash scripts, that serves different purposes 
 
 ## Main Script 
-this script purpose is to create a script file when needed, as you know we need to create a folder for each script, and create a script file inside it, start writing script, save the script and give `execute permission` for the file. 
+This script purpose is to create a script file when needed, as you know we need to create a folder for each script, and create a script file inside it, start writing script, save the script and give `execute permission` for the file. 
 all the above steps written in a script, so we need to just run the script and provide ( pass ) the scrip name as an argument to the main script.
 
 ## Port Scanner Script 
 
 ### purpose of the script 
-the purpose of the script is to scan the open ports against IP addresses and once there is an open port it will append it into a file named `open ports`, and everytime the code will be executed, it will append the `IP address:port` into the file named `open ports` 
+The purpose of the script is to scan the open ports against IP addresses and once there is an open port it will append it into a file named `open ports`, and everytime the code will be executed, it will append the `IP address:port` into the file named `open ports` 
 
 
 ### Script Code 
