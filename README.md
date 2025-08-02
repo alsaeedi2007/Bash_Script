@@ -11,9 +11,9 @@ all the above steps written in a script, so we need to just run the script and p
 the purpose of the script is to scan the open ports against IP addresses and once there is an open port it will append it into a file named `open ports` 
 
 
+### Script Code 
 
-
-
+```
 #!/bin/bash
 read -p  "Enter IP address: " ip_address
 read -p "Enter First Port Number: " first_port
@@ -26,3 +26,4 @@ for (( port=$first_port; port <= $last_port; port++ )); do
 		echo "port $port is open"
 	fi 	
 done
+```
